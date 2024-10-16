@@ -1,0 +1,108 @@
+/*
+ * Style sheet for the simple-blog template.
+ * Author: Niek Adams
+ * Date: 17 October 2024
+ */
+
+/* 
+ * Import the fonts used: Karla & Inconsolata
+ * Source: Google Fonts
+ */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+/*
+ * Colours
+ */
+
+html {
+    --background-colour: #ffffff;
+    --heading-colour: #17202a;
+    --light-colour: #808080;
+    --text-colour: #212f3d;
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        --background-colour: #17202a;
+        --heading-colour: #ffffff;
+        --light-colour: #808080;
+        --text-colour: #ffffff;
+    }
+}
+
+body {
+    background-color: var(--background-colour);
+}
+
+/*
+ * Container
+ */
+
+.container {
+    margin: auto;
+}
+
+@media only screen and (min-width: 48em) {
+    .container {
+        max-width: 48em;
+    }
+}
+
+/*
+ * Headings
+ */
+
+.heading {
+    color: var(--heading-colour);
+    font-family: "Karla", sans-serif;
+    font-size: 1.5em;
+}
+
+.heading::before {
+    color: var(--light-colour);
+    content: '##';
+    margin-right: .5em;
+}
+
+.heading--smaller {
+    font-size: 1.2em;
+}
+
+.heading--smaller::before {
+    content: '###';
+}
+
+.heading--larger {
+    font-size: 1.7em;
+}
+
+.heading--larger::before {
+    content: '#';
+}
+
+/*
+ * Text
+ */
+
+.text {
+    color: var(--text-colour);
+    font-family: "Inconsolata", monospace;
+    font-size: 1em;
+}
+
+.text--italic {
+    font-style: italic;
+}
+
+.text--center {
+    text-align: center;
+}
+
+.text--small {
+    font-size: 0.9em;
+}
+
+.text--spaced {
+    margin-bottom: 2.125em;
+    margin-top: 2.125em;
+}
